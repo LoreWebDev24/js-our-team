@@ -21,6 +21,9 @@
 // }
 
 
+// CREO UN OGGETTO TEAM CON ALL' INETERNO UN ARRAY CHE CONTIENE A SUA VOLTA DIVERSI OGGETTI QUANTI SONO I MEMBRI DEL TEAM, ALL INETRNO DEGLI OGGETTI ABBIAMO DELLE KEY VALORIZZATE CON UNA STRINGA :
+
+
 const team = {
 
     members : [
@@ -57,8 +60,12 @@ const team = {
     ],
 }
 
+// RECUPERO ELEMENTI DEL DOM : 
+
 containerDOMElement = document.querySelector('.container')
 console.log(containerDOMElement)
+
+// CICLO L'ARRAY MEMBRI CONTENUTO ALL' INTERNO DELL' OGGETTO TEAM E VALORIZZO LE VARIABILI CURRENT NAME , CURRENT ROLE , E CURRENT SRC CON IL VALORE DELL' INDEX INIZZIALIZZATO A ZERO E  I <.TEAM.members.length ; PRINTO POI I CURRENT NAME, ROLE ED SRC ALL' INTERNO DEL DOM :
 
 for (let i = 0; i < team.members.length; i++ ) {
     let currentName = team.members[i].name
