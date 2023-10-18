@@ -57,13 +57,18 @@ const team = {
     ],
 }
 
+containerDOMElement = document.querySelector('.container')
+console.log(containerDOMElement)
+
 for (let i = 0; i < team.members.length; i++ ) {
-    const currentName = team.members[i].name
-    const currentRole = team.members[i].role
-    const currentSrc = team.members[i].photo
+    let currentName = team.members[i].name
+    let currentRole = team.members[i].role
+    let currentSrc = team.members[i].photo
     console.log(currentName)
     console.log(currentRole)
     console.log(currentSrc)
+
+    containerDOMElement.innerHTML += currentName + " / " + currentRole + " / " + currentSrc + " / "
 }
 
 
