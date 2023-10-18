@@ -55,14 +55,12 @@ const team = {
             photo: "barbara-ramos-graphic-designer.jpg"
         },      
     ],
-
 }
 
-for ( let i = 0; i <= 6; i++ ) {
-    
-    currentName = team.members[i].name
-    currentRole = team.members[i].role
-    currentSrc = team.members[i].photo
+for (let i = 0; i < team.members.length; i++ ) {
+    const currentName = team.members[i].name
+    const currentRole = team.members[i].role
+    const currentSrc = team.members[i].photo
     console.log(currentName)
     console.log(currentRole)
     console.log(currentSrc)
