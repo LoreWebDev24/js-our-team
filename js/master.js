@@ -30,32 +30,32 @@ const team = {
         {
             name : "Wayne Barnett",
             role : "Founder & CEO",
-            photo: "wayne-barnett-founder-ceo.jpg"
+            photo: ".img/wayne-barnett-founder-ceo.jpg"
         },
         {
             name : "Angela Caroll",
             role : "Chief Editor",
-            photo: "angela-caroll-chief-editor.jpg"
+            photo: ".img/angela-caroll-chief-editor.jpg"
         },
         {
             name : "Walter Gordon",
             role : "Office Manager",
-            photo: "walter-gordon-office-manager.jpg"
+            photo: ".img/walter-gordon-office-manager.jpg"
         },
         {
             name : "Angela Lopez",
             role : "Social Media Manager",
-            photo: "angela-lopez-social-media-manager.jpg"
+            photo: ".img/angela-lopez-social-media-manager.jpg"
         },
         {
             name : "Scott Estrada",
             role : "Developer",
-            photo: "scott-estrada-developer.jpg"
+            photo: ".img/scott-estrada-developer.jpg"
         },
         {
             name : "Barbara Ramos",
             role : "Graphic Designer",
-            photo: "barbara-ramos-graphic-designer.jpg"
+            photo: ".img/barbara-ramos-graphic-designer.jpg"
         },      
     ],
 }
@@ -75,7 +75,20 @@ for (let i = 0; i < team.members.length; i++ ) {
     console.log(currentRole)
     console.log(currentSrc)
 
-    containerDOMElement.innerHTML += currentName + " / " + currentRole + " / " + currentSrc + " / "
+    // containerDOMElement.innerHTML += currentName + " / " + currentRole + " / " + currentSrc + " / "
+
+    // OPPURE: 
+
+    let html = `
+    
+    <div class="team_item">
+        <img src="${currentSrc}">
+        <h3>${currentName}</h3>
+        <p>${currentRole}</p>
+    </div>
+    ` 
+
+    containerDOMElement.innerHTML += html
 }
 
 
